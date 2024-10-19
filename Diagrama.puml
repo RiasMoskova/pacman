@@ -1,0 +1,119 @@
+@startuml
+Pacman--|>Fantasma
+Pacman*--Vida
+Pacman o--Fruta
+Pacman o--Escenario
+Jugador"1" o--Pacman
+Jugador *--Puntaje
+Puntaje o--Punto
+Puntaje o--Tiempo
+Escenario *--Pared
+Escenario *--Teletransporte
+Manzana--|>Fruta
+Melon--|>Fruta
+Fresa--|>Fruta
+Naranja--|>Fruta
+Juego*--Escenario
+Escenario*--ParedHorizontal
+Escenario*--Pared90Grados
+Escenario*--ParedVertical
+Pacman--|>Personaje
+Personaje*--Vida
+Amarillo--|>Color
+Azul--|>Color
+Rosa--|>Color
+Mandarina--|>Fruta
+Personaje*--Color
+Escenario*--Textura
+Escenario*--Pildora
+Personaje o--Pildora
+Personaje--|>Amarillo
+Personaje o--Movimiento
+Movimiento o--Arriba
+Movimiento o--Abajo
+Movimiento o--Derecha
+Movimiento o--Izquierda
+Jugador*--Vida
+Jugador o--Juego
+Pared--|>Azul
+Personaje--|>Fantasma
+
+class Movimiento{
+}
+class Arriba{
+}
+class Abajo{
+}
+class Derecha{
+}
+class Izquierda{
+}
+class Textura{
+}
+class Pildora{
+}
+class Color{
+}
+class Personaje{
++Vive()
++Muere()
+}
+class Naranja{
+}
+class Azul{
+}
+class Amarillo{
+}
+class Rosa{
+}
+class Juego{
+}
+class Mandarina{
+}
+class Pacman{
++Comer()
++Mover()
+}
+class Fantasma{
+}
+class Vida{
++perder()
++ganar()
+}
+class Fruta{
++sumar()
++Consume()
+}
+class Manzana{
+}
+class Naranja{
+}
+class Fresa{
+}
+class Melon{
+}
+class Escenario{
++GenerarTerreno()
+}
+class Jugador{   
+}
+class Puntaje
+Class Punto{
++Consumir()
+}
+class Tiempo{
++ContarTiempo()
+}
+class Teletransporte{
++Teletransportar()
+}
+class Pared{
++Colision()
+}
+class ParedHorizontal{
+}
+class Pared90Grados{
+}
+class ParedVertical{
+}
+@enduml
