@@ -9,7 +9,10 @@ class TazoDorado
     ~TazoDorado(){
         this -> flotando = false;
     }
-    void flotar(){
+    void Flotar(){
         this -> flotando = true;
+    }
+    bool Flotando(){
+        return this->flotando;
     }
 };
